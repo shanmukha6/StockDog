@@ -1,0 +1,20 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="modal-title">Add new Stock</h4>
+        </div>
+      <form role="form" id="add-stock" name="stockForm">
+        <div class="form-group">
+          <label for="stock-symbol">Symbol</label>
+          <input type="text" class="form-control" id="stock-symbol" placeholder="Stock Symbol"
+          ng-model="newStock.company"
+                 ng-options="company as company.label for company in companies"
+                 bs-typeahead required>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
