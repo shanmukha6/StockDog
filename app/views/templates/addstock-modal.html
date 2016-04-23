@@ -11,7 +11,7 @@
             <label for="stock-symbol">Symbol</label>
             <input type="text" class="form-control" id="stock-symbol" placeholder="Stock Symbol"
                    ng-model="newStock.company"
-                   ng-options="company as company.label for company in companies"
+                   oi-options="company as company.label for company in companies"
                    bs-typeahead required>
           </div>
           <div class="form-group">

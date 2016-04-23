@@ -1,9 +1,29 @@
 <div class="row">
   <div class="col-md-3">
     <stk-watchlist-panel></stk-watchlist-panel>
-
   </div>
   <div class="col-md-9">
+
+  <div class="panel panel-info">
+    <div class=" panel-heading">
+      <span class="glyphicon glyphicon-list"></span>
+      {{watchlist.description}}
+      <button type="button" class="btn btn-success btn-xs pull-right"
+              ng-click="showStockModal()" type="button">
+        <span class="glyphicon glyphicon-plus"></span>
+      </button>
+    </div>
+    <div class="panel-body table-responsive">
+      <div ng-hide="stocks.length" class="jumbotron">
+        <h1>Happy Now</h1>
+        <p>why dont you add some stocks on this watchlist</p>
+        <p>Do so now by clicking the <span class="glyphicon glyphicon-plus"></span> Located above </p>
+        <!-- Loop over all stocks and display company symbols -->
+        <p ng-repeat="stock in stocks">{{stock.company.symbol}}</p>
+      </div>
+      <stk-stock-table ng-show="stocks.length" watchlist="watchlist2"></stk-stock-table>
+    </div>
+  </div>
 
   </div>
 </div>
